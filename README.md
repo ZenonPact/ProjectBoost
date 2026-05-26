@@ -1,2 +1,2 @@
-# ProjectBoost
+# ProjectBoost/Godot Project
 
