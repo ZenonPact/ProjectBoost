@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1avfdmhyv1kf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi3di"]
+albedo_color = Color(0.6200133, 0.38010886, 0.22053775, 1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gy1a1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0b4ue"]
+sky_material = SubResource("ProceduralSkyMaterial_gy1a1")
+
+[sub_resource type="Environment" id="Environment_l3thc"]
+background_mode = 1
+background_color = Color(0.07, 0.03985333, 0.0224, 1)
+sky = SubResource("Sky_0b4ue")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Floor" type="CSGBox3D" groups=["Hazard"]]
+use_collision = true
+size = Vector3(30, 8, 5)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9076017, -0.4198323, 0, 0.4198323, 0.9076017, 0, 0, 0, 1, -12.990608, 5.3628645, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.8779162, 0.47881445, 0, -0.47881445, 0.8779162, 0, 0, 0, 1, -12.846039, 12.314772, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.89257, 0.45090863, 0, -0.45090863, 0.89257, 0, 0, 0, 1, 13.399249, 6.4727383, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.86064434, -0.5092067, 0, 0.5092067, 0.86064434, 0, 0, 0, 1, 11.989703, 13.592819, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.24748951, 0.9688907, 0, -0.9688907, -0.24748951, 0, 0, 0, 1, -8.516866, 17.217714, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Ceiling2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.24748951, 0.9688907, 0, -0.9688907, -0.24748951, 0, 0, 0, 1, -0.4228487, 17.372957, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Ceiling3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.68082315, 0.73244786, 0, -0.73244786, 0.68082315, 0, 0, 0, 1, 6.9123487, 17.217714, 0)
+size = Vector3(4, 10, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background" type="CSGBox3D" parent="."]
+transform = Transform3D(0.86096406, -0.5086658, 0, 0.5086658, 0.86096406, 0, 0, 0, 1, -6.776745, 9.300724, -14.027023)
+size = Vector3(4, 4, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.6280717, -0.7781555, 0, 0.7781555, 0.6280717, 0, 0, 0, 1, 0.07850787, 12.355659, -19.360878)
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.92564625, -0.3783902, 0, 0.3783902, 0.92564625, 0, 0, 0, 1, 8.394738, 9.430641, -19.360878)
+size = Vector3(3.7, 3.7, 3.7)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.50571764, -0.8626991, 0, 0.8626991, 0.50571764, 0, 0, 0, 1, -1.1259074, 6.62033, -19.360878)
+size = Vector3(3.7, 3.7, 3.7)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background5" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9650348, -0.2621218, 0, 0.2621218, 0.9650348, 0, 0, 0, 1, -14.039619, 9.300724, -8.578461)
+size = Vector3(4, 9, 2)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="Background6" type="CSGBox3D" parent="."]
+transform = Transform3D(0.73010844, -0.19831133, 0.6539227, 0.26212186, 0.965035, 0, -0.63105804, 0.17140736, 0.7565615, 15.732674, 9.300724, -13.579773)
+size = Vector3(4, 9, 4)
+material = SubResource("StandardMaterial3D_oi3di")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9848077, -0.11161889, 0.13302222, 0, 0.76604444, 0.6427876, -0.17364818, -0.6330222, 0.7544065, 0, 0, 22.173538)
+light_energy = 0.4
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l3thc")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.141449, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.99675, 9.141449, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3769407, 9.141449, 0)
+omni_range = 12.0
+omni_attenuation = 0.5
